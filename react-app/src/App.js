@@ -10,6 +10,7 @@ class App extends Component {
       { name: 'Vivek', age: 31 },
       { name: 'Vijay', age: 36 }
     ],
+    otheState: 'Some other state',
     showPersons: false
   }
 
@@ -47,26 +48,30 @@ class App extends Component {
   }
   render() {
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color: 'white',
       font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px'
+      border: '1px solid white',
+      borderRadius: '25px',
+      padding: '11px',
+      marginTop: '10px'
     };
 
-    let persons = null;
+let persons = null;
 
-    if (this.state.showPersons) {
-      persons = (
-        <div>
-          {this.state.persons.map((person , index) => {
-            return <Person 
-              click={() => this.deletePersonHandler(index)}
-              name={person.name}
-              age={person.age}/>
-          })}
-        </div>
-      )
-    }
+if ( this.state.showPersons) {
+  persons = (
+    <div>
+      {this.state.persons.map((person, index) => {
+        return <Person
+          click={() => this.deletePersonHandler(index)} 
+          name={person.name}
+          age={person.age}/> 
+      })}
+      
+    </div>
+  )
+}
 
     return (
       <div className="App">

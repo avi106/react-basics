@@ -6,3 +6,12 @@
     padding: 16px;
     text-align: center;
 }
+
+.deleteBtn {
+    background-color: red ;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid white;
+    
+}
