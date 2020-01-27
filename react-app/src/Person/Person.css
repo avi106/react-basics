@@ -7,12 +7,19 @@
     text-align: center;
 }
 
-.deleteBtn {
+@media (min-width: 500px) {
+    .Person {
+        width: 450px;
+    }
+}
+
+.deleteBtn:hover {
     background-color: red ;
     color: white;
     padding: 5px;
     border-radius: 20px;
     border: 1px solid white;
     font-weight: bold;
+    cursor: pointer;
     
 }

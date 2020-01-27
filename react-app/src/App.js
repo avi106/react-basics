@@ -39,16 +39,19 @@ class App extends Component {
   }
 
   render() {
-    const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      fontWeight: 'bold',
-      border: '1px solid white',
-      borderRadius: '25px',
-      padding: '11px',
-      marginTop: '10px'
-    };
+    // const style = {
+    //   // backgroundColor: 'red',
+    //   // color: 'white',
+    //   // fontWeight: 'bold',
+    //   // border: '1px solid white',
+    //   // borderRadius: '25px',
+    //   // padding: '11px',
+    //   // cursor: 'pointer',
+    //   // ':hover': {
+    //   //   backgroundColor: 'green',
+    //   //   color:'white'
+    //   // }
+    // };
 
 let persons = null;
 
@@ -62,18 +65,35 @@ if ( this.state.showPersons) {
           age={person.age}
           key={person.id}
           changed={ (event) => this.nameChangedHandler(event, person.id)}/> 
-      })};
+      })}
     </div>
   )
+
+  // style.backgroundColor ='green';
+  // style[':hover']= {
+  //   backgroundColor: 'red',
+  //   color:'black'
+  // }
 }
 
+    const classes = [];
+    if(this.state.persons.length <=2) {
+      classes.push('red');
+    }
+
+    if(this.state.persons.length <=1) {
+      classes.push('bold');
+    }
+
     return (
+
       <div className="App">
           <h1>This is a React App!</h1>
-          <strong>This is really working</strong><br />
-          <button style={style} onClick={this.togglePersonsHandler}>Toggle Handler</button>
+          <p className={classes.join(' ')}>This is really working</p><br />
+          <button className="button" onClick={this.togglePersonsHandler}>Toggle Handler</button>
           {persons}
       </div>
+      
     )
   }
 }

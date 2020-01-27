@@ -2,3 +2,25 @@
   text-align: center;
 }
 
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.button {
+  background-color:green;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 11px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: lightgreen;
+  color: black;
+}
